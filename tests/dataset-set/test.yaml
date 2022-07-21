@@ -1,0 +1,8 @@
+requires:
+  features:
+    - HAVE_LIBJANSSON
+  min-version: 6.0.0
+
+checks:
+- shell:
+    args: wc -l http.intel | grep 0
