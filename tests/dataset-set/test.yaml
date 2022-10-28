@@ -6,3 +6,13 @@ requires:
 checks:
 - shell:
     args: wc -l http.intel | grep 0
+- shell:
+    args: wc -l http_match.intel | grep 1
+- filter:
+    count: 0
+    match:
+      alert.signature_id: 1
+- filter:
+    count: 1
+    match:
+      alert.signature_id: 2
