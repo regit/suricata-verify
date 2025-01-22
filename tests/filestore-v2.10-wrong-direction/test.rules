@@ -1,2 +1,4 @@
 alert http any any -> any any (msg:"alert png images"; http.uri; content:".png"; nocase; sid:1; rev:1;)
 alert http any any -> any any (msg:"store png images"; http.uri; content:".png"; nocase; filestore; sid:2; rev:1;)
+alert http any any -> any any (msg:"store png images"; http.uri; content:".png"; nocase; file.data; content:"titi et gros minet"; filestore; sid:3; rev:1;)
+alert http any any -> any any (msg:"store png images"; http.uri; content:".png"; nocase; filestore; file.data; content:"titi et gros minet"; sid:4; rev:1;)
