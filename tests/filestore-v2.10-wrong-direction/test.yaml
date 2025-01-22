@@ -17,6 +17,16 @@ checks:
   - filter:
       count: 0
       match:
+        event_type: alert
+        alert.signature_id: 3
+  - filter:
+      count: 0
+      match:
+        event_type: alert
+        alert.signature_id: 4
+  - filter:
+      count: 0
+      match:
         event_type: fileinfo
         fileinfo.stored: true
   - filter:
