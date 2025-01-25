@@ -1,0 +1,16 @@
+requires:
+  min-version: 8
+
+pcap: ../filestore-v2.14-multipart/http-multipart-post.pcap
+
+checks:
+  - filter:
+      count: 1
+      match:
+        event_type: alert
+        alert.signature_id: 1
+  - filter:
+      count: 1
+      match:
+        event_type: fileinfo
+        fileinfo.stored: true

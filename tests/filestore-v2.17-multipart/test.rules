@@ -1,0 +1,1 @@
+alert http any any -> any any (msg:"test"; http.host; content:"home"; file.data; content:"bateau"; filestore; sid:1;)
